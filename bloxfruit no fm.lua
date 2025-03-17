@@ -1,94 +1,20 @@
--- Create ScreenGui
-local ScreenGui = Instance.new("ScreenGui")
-ScreenGui.Parent = game.CoreGui
+repeat wait() until game:IsLoaded() and game.Players.LocalPlayer
 
--- Create Main Frame
-local Frame = Instance.new("Frame")
-Frame.Size = UDim2.new(0, 300, 0, 150)
-Frame.Position = UDim2.new(0.5, -150, 0.5, -75)
-Frame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)  -- Dark background
-Frame.BorderSizePixel = 0
-Frame.Parent = ScreenGui
+getgenv().Key = "" -- Variable for user input
+local CorrectKey = "ViperTheSick" -- Set the correct key
 
--- Create UI Corner (Rounded Edges)
-local UICorner = Instance.new("UICorner")
-UICorner.CornerRadius = UDim.new(0, 10)
-UICorner.Parent = Frame
+repeat
+    io.write("Enter Key: ") -- Prompt in console (for executors that support console input)
+    getgenv().Key = read() -- Wait for user input
 
--- Create Title Label
-local Title = Instance.new("TextLabel")
-Title.Size = UDim2.new(1, 0, 0, 30)
-Title.Position = UDim2.new(0, 0, 0, 0)
-Title.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-Title.Text = "Viper Key System"
-Title.TextColor3 = Color3.fromRGB(255, 255, 255)
-Title.TextSize = 18
-Title.Font = Enum.Font.GothamBold
-Title.Parent = Frame
-
--- Create Key Input Box
-local KeyInput = Instance.new("TextBox")
-KeyInput.Size = UDim2.new(0.8, 0, 0, 30)
-KeyInput.Position = UDim2.new(0.1, 0, 0.4, 0)
-KeyInput.PlaceholderText = "Enter Key Here..."
-KeyInput.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
-KeyInput.TextColor3 = Color3.fromRGB(255, 255, 255)
-KeyInput.TextSize = 16
-KeyInput.Font = Enum.Font.Gotham
-KeyInput.Parent = Frame
-
-local UICorner2 = Instance.new("UICorner")
-UICorner2.CornerRadius = UDim.new(0, 5)
-UICorner2.Parent = KeyInput
-
--- Create Submit Button
-local SubmitButton = Instance.new("TextButton")
-SubmitButton.Size = UDim2.new(0.8, 0, 0, 30)
-SubmitButton.Position = UDim2.new(0.1, 0, 0.7, 0)
-SubmitButton.Text = "Submit"
-SubmitButton.BackgroundColor3 = Color3.fromRGB(50, 150, 255)
-SubmitButton.TextColor3 = Color3.fromRGB(255, 255, 255)
-SubmitButton.TextSize = 16
-SubmitButton.Font = Enum.Font.GothamBold
-SubmitButton.Parent = Frame
-
-local UICorner3 = Instance.new("UICorner")
-UICorner3.CornerRadius = UDim.new(0, 5)
-UICorner3.Parent = SubmitButton
-
--- Close Button (Optional)
-local CloseButton = Instance.new("TextButton")
-CloseButton.Size = UDim2.new(0, 25, 0, 25)
-CloseButton.Position = UDim2.new(1, -30, 0, 5)
-CloseButton.Text = "X"
-CloseButton.BackgroundColor3 = Color3.fromRGB(200, 50, 50)
-CloseButton.TextColor3 = Color3.fromRGB(255, 255, 255)
-CloseButton.TextSize = 14
-CloseButton.Font = Enum.Font.GothamBold
-CloseButton.Parent = Frame
-
-local UICorner4 = Instance.new("UICorner")
-UICorner4.CornerRadius = UDim.new(0, 5)
-UICorner4.Parent = CloseButton
-
--- Key Verification System
-local correctKey = "ViperTheSick"  -- Set your correct key
-
-SubmitButton.MouseButton1Click:Connect(function()
-    if KeyInput.Text == correctKey then
-        print("✅ Correct Key! Access Granted.")
-        ScreenGui:Destroy()  -- Close GUI
-        -- Run your main script here
-    else
-        print("❌ Invalid Key! Try again.")
-        KeyInput.Text = ""  -- Clear input field
+    if getgenv().Key ~= CorrectKey then
+        print("❌ Invalid Key! Please try again.") -- Show error in console
     end
-end)
+until getgenv().Key == CorrectKey
 
--- Close Button Function
-CloseButton.MouseButton1Click:Connect(function()
-    ScreenGui:Destroy()
-end)
+print("✅ Access Granted! Running script...") -- Key is correct, continue script
+
+-- Your main script goes here!)
 
 
 
