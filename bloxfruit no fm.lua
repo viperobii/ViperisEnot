@@ -210,7 +210,7 @@ Parent = v6,
 
 BackgroundTransparency = 1,
 
-Text = "Youtube: Min Gaming",
+Text = "Tiktok : Freya Piloter",
 
 Position = UDim2.new(0, 75, 0, 10),
 
@@ -626,7 +626,7 @@ local v14 = loadstring(game:HttpGet("https://raw.githubusercontent.com/obfalchx/
 
 local v15 = v14:CreateWindow({
 
-Title = "Viper Hub-BloxFruit",
+Title = "Viper Hub Blox-Fruit [Premium]",
 
 SubTitle = "by Viper_",
 
@@ -664,7 +664,7 @@ Title = "Tabs Sea & Events"
 
 ITM = v15:AddTab({
 
-Title = "Tabs ITM"
+Title = "Tabs ITem"
 
 }),
 
@@ -700,13 +700,13 @@ Title = "Tab Teleports"
 
 Visual = v15:AddTab({
 
-Title = "Esp Visual"
+Title = "Visual"
 
 }),
 
 Fruit = v15:AddTab({
 
-Title = "Tab Fruit s"
+Title = "Tab Fruits"
 
 }),
 
@@ -8706,7 +8706,7 @@ end);
 
 local v525 = v16.Sea:AddToggle("ToggleFishCrew", {
 
-Title = "Toggle Fishing Boat",
+Title = "Auto Kill Fish Crew",
 
 Description = "",
 
@@ -8876,7 +8876,7 @@ end);
 
 local v527 = v16.Sea:AddToggle("ToggleGhostShip", {
 
-Title = "Toggle Ghost Ship",
+Title = "Auto Kill Ghost Ship",
 
 Description = "",
 
