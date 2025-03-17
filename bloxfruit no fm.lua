@@ -1,9 +1,3 @@
-
-
-
-
-
-
 shared.LoaderTitle = "Follow Viper Hub Support";
 
 shared.LoaderKeyFrames = {
@@ -12903,7 +12897,6 @@ end
 end
 
 end);
-
 
 local v92 = v16.Setting:AddToggle("ToggleWhite", {
 
