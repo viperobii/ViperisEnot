@@ -1,20 +1,61 @@
 repeat wait() until game:IsLoaded() and game.Players.LocalPlayer
 
-getgenv().Key = "" -- Variable for user input
-local CorrectKey = "ViperTheSick" -- Set the correct key
+local CorrectKey = "ViperTheSick"
+local Player = game.Players.LocalPlayer
+local CoreGui = game:GetService("CoreGui")
 
-repeat
-    io.write("Enter Key: ") -- Prompt in console (for executors that support console input)
-    getgenv().Key = read() -- Wait for user input
+-- Create the GUI
+local ScreenGui = Instance.new("ScreenGui")
+ScreenGui.Parent = CoreGui
 
-    if getgenv().Key ~= CorrectKey then
-        print("❌ Invalid Key! Please try again.") -- Show error in console
+local Frame = Instance.new("Frame")
+Frame.Size = UDim2.new(0, 300, 0, 150)
+Frame.Position = UDim2.new(0.5, -150, 0.5, -75)
+Frame.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Frame.Parent = ScreenGui
+
+local Title = Instance.new("TextLabel")
+Title.Text = "Enter Key to Continue"
+Title.Size = UDim2.new(1, 0, 0, 30)
+Title.BackgroundTransparency = 1
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.Font = Enum.Font.GothamBold
+Title.TextSize = 14
+Title.Parent = Frame
+
+local TextBox = Instance.new("TextBox")
+TextBox.Size = UDim2.new(0.8, 0, 0, 30)
+TextBox.Position = UDim2.new(0.1, 0, 0.3, 0)
+TextBox.PlaceholderText = "Enter Key..."
+TextBox.Text = ""
+TextBox.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.Font = Enum.Font.Gotham
+TextBox.TextSize = 14
+TextBox.Parent = Frame
+
+local SubmitButton = Instance.new("TextButton")
+SubmitButton.Size = UDim2.new(0.5, 0, 0, 30)
+SubmitButton.Position = UDim2.new(0.25, 0, 0.7, 0)
+SubmitButton.Text = "Submit"
+SubmitButton.BackgroundColor3 = Color3.fromRGB(0, 170, 0)
+SubmitButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+SubmitButton.Font = Enum.Font.GothamBold
+SubmitButton.TextSize = 14
+SubmitButton.Parent = Frame
+
+-- Function to check key
+SubmitButton.MouseButton1Click:Connect(function()
+    if TextBox.Text == CorrectKey then
+        print("✅ Correct Key! Running script...")
+        ScreenGui:Destroy() -- Remove GUI
+        -- Place your main script loader here
+    else
+        TextBox.Text = ""
+        TextBox.PlaceholderText = "❌ Wrong Key! Try again..."
+        TextBox.TextColor3 = Color3.fromRGB(255, 0, 0)
     end
-until getgenv().Key == CorrectKey
-
-print("✅ Access Granted! Running script...") -- Key is correct, continue script
-
--- Your main script goes here!)
+end)
 
 
 
