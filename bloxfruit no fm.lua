@@ -12904,28 +12904,6 @@ end
 
 end);
 
-local vAutoAttack = vAutoAttack.Setting:AddToggle("ToggleAttack", {
-    Title = "Auto Attack",
-    Description = "Automatically attacks mobs and players with no cooldown",
-    Default = false
-})
-
-vAutoAttack:OnChanged(function(state)
-    _G.AutoAttack = state
-
-    while _G.AutoAttack do
-        wait()  -- No delay for instant attacks
-        
-        -- Simulate an attack (change to match your attack method)
-        game:GetService("VirtualUser"):CaptureController()
-        game:GetService("VirtualUser"):Button1Down(Vector2.new(0, 0), workspace.CurrentCamera.CFrame)
-
-    end
-end)
-
-
-
-
 
 local v92 = v16.Setting:AddToggle("ToggleWhite", {
 
