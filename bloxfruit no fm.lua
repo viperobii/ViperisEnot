@@ -1,61 +1,3 @@
-repeat wait() until game:IsLoaded() and game.Players.LocalPlayer
-
-local CorrectKey = "ViperTheSick"
-local Player = game.Players.LocalPlayer
-local CoreGui = game:GetService("CoreGui")
-
--- Create the GUI
-local ScreenGui = Instance.new("ScreenGui")
-ScreenGui.Parent = CoreGui
-
-local Frame = Instance.new("Frame")
-Frame.Size = UDim2.new(0, 300, 0, 150)
-Frame.Position = UDim2.new(0.5, -150, 0.5, -75)
-Frame.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
-Frame.Parent = ScreenGui
-
-local Title = Instance.new("TextLabel")
-Title.Text = "Enter Key to Continue"
-Title.Size = UDim2.new(1, 0, 0, 30)
-Title.BackgroundTransparency = 1
-Title.TextColor3 = Color3.fromRGB(255, 255, 255)
-Title.Font = Enum.Font.GothamBold
-Title.TextSize = 14
-Title.Parent = Frame
-
-local TextBox = Instance.new("TextBox")
-TextBox.Size = UDim2.new(0.8, 0, 0, 30)
-TextBox.Position = UDim2.new(0.1, 0, 0.3, 0)
-TextBox.PlaceholderText = "Enter Key..."
-TextBox.Text = ""
-TextBox.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextBox.Font = Enum.Font.Gotham
-TextBox.TextSize = 14
-TextBox.Parent = Frame
-
-local SubmitButton = Instance.new("TextButton")
-SubmitButton.Size = UDim2.new(0.5, 0, 0, 30)
-SubmitButton.Position = UDim2.new(0.25, 0, 0.7, 0)
-SubmitButton.Text = "Submit"
-SubmitButton.BackgroundColor3 = Color3.fromRGB(0, 170, 0)
-SubmitButton.TextColor3 = Color3.fromRGB(255, 255, 255)
-SubmitButton.Font = Enum.Font.GothamBold
-SubmitButton.TextSize = 14
-SubmitButton.Parent = Frame
-
--- Function to check key
-SubmitButton.MouseButton1Click:Connect(function()
-    if TextBox.Text == CorrectKey then
-        print("✅ Correct Key! Running script...")
-        ScreenGui:Destroy() -- Remove GUI
-        -- Place your main script loader here
-    else
-        TextBox.Text = ""
-        TextBox.PlaceholderText = "❌ Wrong Key! Try again..."
-        TextBox.TextColor3 = Color3.fromRGB(255, 0, 0)
-    end
-end)
 
 
 
@@ -12961,6 +12903,29 @@ end
 end
 
 end);
+
+local vAutoAttack = vAutoAttack.Setting:AddToggle("ToggleAttack", {
+    Title = "Auto Attack",
+    Description = "Automatically attacks mobs and players with no cooldown",
+    Default = false
+})
+
+vAutoAttack:OnChanged(function(state)
+    _G.AutoAttack = state
+
+    while _G.AutoAttack do
+        wait()  -- No delay for instant attacks
+        
+        -- Simulate an attack (change to match your attack method)
+        game:GetService("VirtualUser"):CaptureController()
+        game:GetService("VirtualUser"):Button1Down(Vector2.new(0, 0), workspace.CurrentCamera.CFrame)
+
+    end
+end)
+
+
+
+
 
 local v92 = v16.Setting:AddToggle("ToggleWhite", {
 
