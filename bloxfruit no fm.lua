@@ -5936,7 +5936,7 @@ end
 
 end);
 
-local v56 = v16.Main:AddSection("Thông Thạo");
+local v56 = v16.Main:AddSection("Mastery");
 
 local v57 = v16.Main:AddDropdown("DropdownMastery", {
 
@@ -6916,7 +6916,7 @@ end);
 
 end
 
-local v60 = v16.Main:AddSection("Trùm");
+local v60 = v16.Main:AddSection("Boss");
 
 if Sea1 then
 
@@ -7102,7 +7102,7 @@ end
 
 end);
 
-local v63 = v16.Main:AddSection("Nguyên Liệu");
+local v63 = v16.Main:AddSection("Materials List");
 
 if Sea1 then
 
@@ -7302,7 +7302,7 @@ end);
 
 if Sea3 then
 
-local v498 = v16.Sea:AddSection("Kirsune Islands & Events");
+local v498 = v16.Sea:AddSection("Kitsune Islands & Events");
 
 local v499 = v16.Sea:AddParagraph({
 
@@ -7542,7 +7542,7 @@ end
 
 if Sea3 then
 
-local v503 = v16.Sea:AddSection("Biển");
+local v503 = v16.Sea:AddSection("Boats");
 
 local v504 = game:GetService("Players");
 
@@ -8312,7 +8312,7 @@ end);
 
 v16.Sea:AddButton({
 
-Title = "Fly To Hunting Area",
+Title = "Teleport To Boat Delear Ship",
 
 Description = "",
 
@@ -13026,7 +13026,8 @@ local v99 = v16.Status:AddParagraph({
 
 Title = "Information",
 
-Content = "━━━━━━━━━━━━━━━━━━━━━\n" .. "Tên : " .. game.Players.LocalPlayer.DisplayName .. " (@" .. game.Players.LocalPlayer.Name .. ")\n" .. "Cấp : " .. game:GetService("Players").LocalPlayer.Data.Level.Value .. "\n" .. "Tiền : " .. game:GetService("Players").LocalPlayer.Data.Beli.Value .. "\n" .. "Điểm F : " .. game:GetService("Players").LocalPlayer.Data.Fragments.Value .. "\n" .. "Tiền Truy Nã : " .. game:GetService("Players").LocalPlayer.leaderstats["Bounty/Honor"].Value .. "\n" .. "Máu: " .. game.Players.LocalPlayer.Character.Humanoid.Health .. "/" .. game.Players.LocalPlayer.Character.Humanoid.MaxHealth .. "\n" .. "Năng Lượng : " .. game.Players.LocalPlayer.Character.Energy.Value .. "/" .. game.Players.LocalPlayer.Character.Energy.MaxValue .. "\n" .. "Tộc : " .. game:GetService("Players").LocalPlayer.Data.Race.Value .. "\n" .. "Trái : " .. game:GetService("Players").LocalPlayer.Data.DevilFruit.Value .. "\n" .. "━━━━━━━━━━━━━━━━━━━━━"
+Content = "━━━━━━━━━━━━━━━━━━━━━\n" .. "Name : " .. game.Players.LocalPlayer.DisplayName .. " (@" .. game.Players.LocalPlayer.Name .. ")\n" .. "Level : " .. game:GetService("Players").LocalPlayer.Data.Level.Value .. "\n" .. "Money : " .. game:GetService("Players").LocalPlayer.Data.Beli.Value .. "\n" .. "F Point : " .. game:GetService("Players").LocalPlayer.Data.Fragments.Value .. "\n" .. "Bounty : " .. game:GetService("Players").LocalPlayer.leaderstats["Bounty/Honor"].Value .. "\n" .. "Blood: " .. game.Players.LocalPlayer.Character.Humanoid.Health .. "/" .. game.Players.LocalPlayer.Character.Humanoid.MaxHealth .. "\n" .. "Energy : " .. game.Players.LocalPlayer.Character.Energy.Value .. "/" .. game.Players.LocalPlayer.Character.Energy.MaxValue .. "\n" .. "Ethnicity : " .. game:GetService("Players").LocalPlayer.Data.Race.Value .. "\n" .. "Left : " .. game:GetService("Players").LocalPlayer.Data.DevilFruit.Value .. "\n" ..
+ "━━━━━━━━━━━━━━━━━━━━━"
 
 });
 
@@ -13106,7 +13107,7 @@ local v299 = math.floor(v297 / 60) % 60 ;
 
 local v300 = v297 % 60 ;
 
-v102:SetDesc(string.format("%02d Tiếng-%02d Phút-%02d Giây", v298, v299, v300));
+v102:SetDesc(string.format("%02d Hours-%02d Minutes-%02d Seconds", v298, v299, v300));
 
 end
 
@@ -13122,7 +13123,7 @@ end);
 
 local v104 = v16.Status:AddParagraph({
 
-Title = "Đảo Leviathan",
+Title = "Leviathan Status",
 
 Content = ""
 
@@ -13156,7 +13157,7 @@ Title = "Job ID",
 
 Default = "",
 
-Placeholder = "Dán Job ID Vào Đây",
+Placeholder = "Input Your Job ID",
 
 Numeric = false,
 
@@ -13538,7 +13539,7 @@ end
 
 end);
 
-local v56 = v16.Player:AddSection("Khác");
+local v56 = v16.Player:AddSection("Setting Combat");
 
 local v115 = v16.Player:AddToggle("ToggleNoClip", {
 
@@ -14306,7 +14307,7 @@ end
 
 v16.Visual:AddButton({
 
-Title = "Fake",
+Title = "Fake Level",
 
 Description = "",
 
@@ -14404,7 +14405,7 @@ Title = "Level",
 
 Default = "",
 
-Placeholder = "Nhập",
+Placeholder = "",
 
 Numeric = false,
 
@@ -14424,7 +14425,7 @@ Title = "Exp",
 
 Default = "",
 
-Placeholder = "Nhập",
+Placeholder = "",
 
 Numeric = false,
 
@@ -14444,7 +14445,7 @@ Title = "Beli",
 
 Default = "",
 
-Placeholder = "Nhập",
+Placeholder = "",
 
 Numeric = false,
 
@@ -14464,7 +14465,7 @@ Title = "F Points",
 
 Default = "",
 
-Placeholder = "Nhập",
+Placeholder = "",
 
 Numeric = false,
 
@@ -14978,7 +14979,7 @@ end
 
 end);
 
-local v56 = v16.Fruit:AddSection("Định Vị");
+local v56 = v16.Fruit:AddSection("Main Esp");
 
 local v130 = v16.Fruit:AddToggle("ToggleEspPlayer", {
 
@@ -16110,7 +16111,7 @@ end
 
 v16.Race:AddButton({
 
-Title = "Place To Buy Gear",
+Title = "Teleport To Ancient One",
 
 Description = "",
 
@@ -16124,11 +16125,11 @@ end
 
 });
 
-local v56 = v16.Race:AddSection("Tộc");
+local v56 = v16.Race:AddSection("Trials");
 
 v16.Race:AddButton({
 
-Title = "Cửa Tộc",
+Title = "TP Race Door",
 
 Description = "",
 
@@ -16168,7 +16169,7 @@ end
 
 local v144 = v16.Race:AddToggle("ToggleHumanandghoul", {
 
-Title = "Hoàn Thành Ải [Human/Ghoul]",
+Title = "Complete Stage[Human/Ghoul]",
 
 Description = "",
 
@@ -16588,7 +16589,7 @@ end);
 
 v17.ToggleUpgrade:SetValue(false);
 
-local v56 = v16.Shop:AddSection("Khả Năng");
+local v56 = v16.Shop:AddSection("Haki");
 
 v16.Shop:AddButton({
 
@@ -16646,7 +16647,7 @@ end
 
 });
 
-local v56 = v16.Shop:AddSection("Kiếm");
+local v56 = v16.Shop:AddSection("Swords");
 
 v16.Shop:AddButton({
 
@@ -16788,7 +16789,7 @@ end
 
 });
 
-local v56 = v16.Shop:AddSection("Võ");
+local v56 = v16.Shop:AddSection("Melee");
 
 v16.Shop:AddButton({
 
@@ -18138,7 +18139,7 @@ end
 
 end);
 
-local v168 = v16.Sea:AddSection("Đảo Dung Nham");
+local v168 = v16.Sea:AddSection("Prehistoric Event");
 
 local v169 = v16.Sea:AddParagraph({
 
@@ -18536,7 +18537,7 @@ v885.Humanoid.Health = 0;
 
 v885.HumanoidRootPart.CanCollide = false;
 
-until not KillAura or not v885.Parent or (v885.Humanoid.Health <= 0)
+until not KillAura or not (v885.Humanoid.Health <= 0)
 
 end
 
