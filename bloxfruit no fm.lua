@@ -192,7 +192,7 @@ Parent = v6,
 
 BackgroundTransparency = 1,
 
-Image = "rbxassetid://13717478897",
+Image = "rbxassetid://5009915812",
 
 Position = UDim2.new(0, 15, 0, 10),
 
@@ -646,7 +646,7 @@ local v16 = {
 
 Home = v15:AddTab({
 
-Title = "Tabs Home"
+Title = "Tabs Home & Discord"
 
 }),
 
@@ -658,19 +658,19 @@ Title = "Tabs Main"
 
 Sea = v15:AddTab({
 
-Title = "Tabs Sea & Events"
+Title = "Tabs Sea Events"
 
 }),
 
 ITM = v15:AddTab({
 
-Title = "Tabs ITem"
+Title = "Tabs Items"
 
 }),
 
 Setting = v15:AddTab({
 
-Title = "Tab Settings"
+Title = "Tabs Settings"
 
 }),
 
@@ -682,55 +682,55 @@ Title = "Status Server"
 
 Stats = v15:AddTab({
 
-Title = "Tab Stats"
+Title = "Tabs Stats"
 
 }),
 
 Player = v15:AddTab({
 
-Title = "Tab Players"
+Title = "Tabs Players"
 
 }),
 
 Teleport = v15:AddTab({
 
-Title = "Tab Teleports"
+Title = "Tabs Teleports"
 
 }),
 
 Visual = v15:AddTab({
 
-Title = "Visual"
+Title = "Tabs Fake Level"
 
 }),
 
 Fruit = v15:AddTab({
 
-Title = "Tab Fruits"
+Title = "Tabs Fruits & ESP"
 
 }),
 
 Raid = v15:AddTab({
 
-Title = "Tab Raids"
+Title = "Tabs Raids"
 
 }),
 
 Race = v15:AddTab({
 
-Title = "Race & V4"
+Title = "Tabs Race & V4"
 
 }),
 
 Shop = v15:AddTab({
 
-Title = "Shop"
+Title = "Tabs Shop"
 
 }),
 
 Misc = v15:AddTab({
 
-Title = "Misc"
+Title = "Tabs Misc"
 
 })
 
