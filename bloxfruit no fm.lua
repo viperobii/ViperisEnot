@@ -1,22 +1,18 @@
 local v14 = loadstring(game:HttpGet("https://raw.githubusercontent.com/obfalchx/testfluent/refs/heads/main/FluentTrau"))();
 
 local v15 = v14:CreateWindow({
-
-Title = "Viper Hub-BloxFruit",
-
-SubTitle = "by Viper_",
-
-TabWidth = 160,
-
-Theme = "Dark",
-
-Acrylic = false,
-
-Size = UDim2.fromOffset(500, 320),
-
-MinimizeKey = Enum.KeyCode.End
-
+    Title = "Viper Hub-BloxFruit",
+    SubTitle = "by Viper_",
+    TabWidth = 160,
+    Theme = "Dark",
+    Acrylic = false,
+    Size = UDim2.fromOffset(500, 320),
+    MinimizeKey = Enum.KeyCode.End
 });
+
+-- Get PlayerGui
+local player = game.Players.LocalPlayer
+local playerGui = player:FindFirstChild("PlayerGui") or player:WaitForChild("PlayerGui")
 
 -- Create Floating UI Toggle Button
 local screenGui = Instance.new("ScreenGui")
@@ -35,22 +31,21 @@ floatingButton.Draggable = true
 floatingButton.Parent = screenGui
 
 -- Ensure UI is initially visible
-Window.Root.Visible = true
+v15.Root.Visible = true
 
 -- Toggle UI visibility with floating button
 local uiVisible = true
 local function toggleUI()
     uiVisible = not uiVisible
-    Window.Root.Visible = uiVisible
+    v15.Root.Visible = uiVisible
 end
 
 floatingButton.MouseButton1Click:Connect(toggleUI)
 
 local v16 = {
-
-Home = v15:AddTab({
-    Title = "Information"
-}),
+    Home = v15:AddTab({
+        Title = "Information"
+    })
 
 Main = v15:AddTab({
     Title = "Grinding"
