@@ -1297,7 +1297,7 @@ function CheckBossDimension()
 		end
 	end
 end;
-local L_34_ = L_33_:Window("Viper Hub Blox-Fruits", Enum.KeyCode.LeftControl)
+local L_34_ = L_33_:SetTitle("Viper Hub Blox-Fruits"), Enum.KeyCode.LeftControl)
 print("|VIPER DEBUG| Anti AFK")
 game:GetService("Players").LocalPlayer.Idled:connect(function()
 	print("|VIPER DEBUG| AFK detected, prevented +1")
