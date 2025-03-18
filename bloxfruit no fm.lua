@@ -1297,7 +1297,6 @@ function CheckBossDimension()
 		end
 	end
 end;
-local L_33_ = loadstring(game:HttpGet("https://you.whimper.xyz/sources/CokkaHub/ui.lua"))()
 local L_34_ = L_33_:Window("Viper Hub Blox-Fruits", Enum.KeyCode.LeftControl)
 print("|VIPER DEBUG| Anti AFK")
 game:GetService("Players").LocalPlayer.Idled:connect(function()
