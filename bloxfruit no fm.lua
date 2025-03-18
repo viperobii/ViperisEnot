@@ -1901,7 +1901,7 @@ spawn(function()
 			if _25msShared.AntiStranger then
 				for L_222_forvar0, L_223_forvar1 in pairs(game:GetService("Players"):GetChildren()) do
 					if L_223_forvar1.Data.Level.Value >= 2601 or L_223_forvar1.Data.Level.Value > 20000 then
-						game.Players.LocalPlayer:Kick("Cokka Hub found an Admin!")
+						game.Players.LocalPlayer:Kick("Viper Hub found an Admin!")
 						print("|COKKA DEBUG| Detected Stranger, Hopping Server...")
 						Hop()
 					end
