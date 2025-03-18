@@ -14,7 +14,7 @@ getgenv().CokkaRan=true
 
 
 spawn(function()
-	loadstring(game:HttpGet("https://you.whimper.xyz/cute"))()
+	
 end)
 
 local player = game:GetService("Players").LocalPlayer
@@ -1298,10 +1298,10 @@ function CheckBossDimension()
 	end
 end;
 local L_33_ = loadstring(game:HttpGet("https://you.whimper.xyz/sources/CokkaHub/ui.lua"))()
-local L_34_ = L_33_:Window("Cokka Hub 25ms was here", Enum.KeyCode.LeftControl)
-print("|COKKA DEBUG| Anti AFK")
+local L_34_ = L_33_:Window("Viper Hub Blox-Fruits", Enum.KeyCode.LeftControl)
+print("|VIPER DEBUG| Anti AFK")
 game:GetService("Players").LocalPlayer.Idled:connect(function()
-	print("|COKKA DEBUG| AFK detected, prevented +1")
+	print("|VIPER DEBUG| AFK detected, prevented +1")
 	L_7_:ClickButton2(Vector2.new())
 	L_7_:Button2Down(Vector2.new(0, 0), workspace.CurrentCamera.CFrame)
 	wait(1)
