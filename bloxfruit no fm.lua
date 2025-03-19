@@ -2,7 +2,7 @@
 
 
 
-shared.LoaderTitle = "Subscribe to Min Gaming Channel";
+shared.LoaderTitle = "Support Viper Hub Discord";
 
 shared.LoaderKeyFrames = {
 
@@ -210,7 +210,7 @@ Parent = v6,
 
 BackgroundTransparency = 1,
 
-Text = "Youtube: Min Gaming",
+Text = "By : Viper ",
 
 Position = UDim2.new(0, 75, 0, 10),
 
@@ -5393,7 +5393,7 @@ end);
 
 local v48 = v16.Main:AddDropdown("DropdownSelectWeapon", {
 
-Title = "Vũ Khí",
+Title = "Select Weapons",
 
 Description = "",
 
@@ -13549,7 +13549,7 @@ end
 
 end);
 
-local v56 = v16.Player:AddSection("Khác");
+local v56 = v16.Player:AddSection("Setting Player");
 
 local v115 = v16.Player:AddToggle("ToggleNoClip", {
 
@@ -13947,7 +13947,7 @@ end
 
 });
 
-local v56 = v16.Teleport:AddSection("Đảo");
+local v56 = v16.Teleport:AddSection("Setting Island");
 
 if Sea1 then
 
@@ -17455,7 +17455,7 @@ end
 
 end);
 
-local v56 = v16.Misc:AddSection("Sương");
+local v56 = v16.Misc:AddSection("Misc Setting");
 
 local function v152()
 
@@ -18149,11 +18149,11 @@ end
 
 end);
 
-local v168 = v16.Sea:AddSection("Đảo Dung Nham");
+local v168 = v16.Sea:AddSection("Prehistoric Island");
 
 local v169 = v16.Sea:AddParagraph({
 
-Title = "Trạng Thái Đảo Dung Nham",
+Title = "Prehistoric Island Status",
 
 Content = ""
 
