@@ -2,7 +2,7 @@
 
 
 
-shared.LoaderTitle = "Support Viper Hub Discord Server";
+shared.LoaderTitle = "Subscribe to Min Gaming Channel";
 
 shared.LoaderKeyFrames = {
 
@@ -46,15 +46,18 @@ LoaderData = {
 
 Name = shared.LoaderTitle or "A Loader",
 
-Main = Color3.fromRGB(0, 0, 0),  
+Colors = shared.LoaderColors or {
 
-Topic = Color3.fromRGB(255, 255, 0),  
+Main = Color3.fromRGB(0, 0, 0),
 
-Title = Color3.fromRGB(255, 0, 0),  
+Topic = Color3.fromRGB(200, 200, 200),
 
-LoaderBackground = Color3.fromRGB(40, 40, 40),  
+Title = Color3.fromRGB(255, 255, 255),
 
-LoaderSplash = Color3.fromRGB(255, 255, 0)
+LoaderBackground = Color3.fromRGB(40, 40, 40),
+
+LoaderSplash = Color3.fromRGB(3, 252, 3)
+
 }
 
 },
