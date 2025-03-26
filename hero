@@ -2,7 +2,7 @@ local v14 = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/rel
 
 local v15 = v14:CreateWindow({
 
-Title = "Viper Hub-BloxFruit [BETA]",
+Title = "Viper Hub-BloxFruit [Beta]",
 
 SubTitle = "by Viper_",
 
