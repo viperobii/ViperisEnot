@@ -2,7 +2,7 @@ local v14 = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/rel
 
 local v15 = v14:CreateWindow({
 
-Title = "Viper Hub-BloxFruit [Beta]",
+Title = "Viper Hub-BloxFruit [Freemium]",
 
 SubTitle = "by Viper_",
 
@@ -12,7 +12,7 @@ Theme = "Dark",
 
 Acrylic = false,
 
-Size = UDim2.fromOffset(500, 370),
+Size = UDim2.fromOffset(500, 360),
 
 MinimizeKey = Enum.KeyCode.End
 
@@ -134,7 +134,7 @@ local v16 = {
 
 Home = v15:AddTab({
 
-Title = "Tab Updates Info"
+Title = "Tab Updates"
 
 }),
 
@@ -164,7 +164,7 @@ Title = "Tab Settings"
 
 Status = v15:AddTab({
 
-Title = "Tab Webhook JobId Server"
+Title = "Tab Webhook Server"
 
 }),
 
@@ -177,12 +177,6 @@ Title = "Tab Auto Stats"
 Player = v15:AddTab({
 
 Title = "Tab Bounty Hunt"
-
-}),
-
-Hunt = v15:AddTab({
-
-Title = "Tab Player Settings"
 
 }),
 
@@ -218,7 +212,7 @@ Title = "Tab Raids"
 
 Race = v15:AddTab({
 
-Title = "Tab V4 Race Trial"
+Title = "Tab V4 Race"
 
 }),
 
@@ -5173,9 +5167,9 @@ end);
 
 local v50 = v16.Main:AddToggle("ToggleMobAura", {
 
-Title = "Auto Farm Nearest Mob",
+Title = "Auto Farm Nearest Mob / Auto Raid",
 
-Description = "Nearest Mob",
+Description = "Nearest Mob Or Raid Mobs",
 
 Default = false
 
@@ -12591,7 +12585,7 @@ end);
 
 v17.ToggleF:SetValue(true);
 
-local v99 = v16.Home:AddParagraph({
+local v99 = v16.Status:AddParagraph({
 
 Title = "Information",
 
@@ -12609,7 +12603,7 @@ Content = "━━━━━━━━━━━━━━━━━━━━━\n" ..
 
 });
 
-local v100 = v16.Home:AddParagraph({
+local v100 = v16.Status:AddParagraph({
 
 Title = "Time",
 
@@ -12667,7 +12661,7 @@ end
 
 end);
 
-local v102 = v16.Home:AddParagraph({
+local v102 = v16.Status:AddParagraph({
 
 Title = "Server Time",
 
@@ -12699,7 +12693,7 @@ end
 
 end);
 
-local v104 = v16.Home:AddParagraph({
+local v104 = v16.Status:AddParagraph({
 
 Title = "Leviathan Island",
 
@@ -13065,14 +13059,6 @@ end
 
 });
 
--- Create Toggle
-local ToggleSpectate = v16.Player:AddToggle("ToggleSpectate", {
-    Title = "Spectate Player",
-    Description = "Enable or disable spectating",
-    Default = false
-})
-
-
 local v114 = v16.Player:AddToggle("ToggleTeleport", {
 
 Title = "Auto Kill Player",
@@ -13125,9 +13111,9 @@ end
 
 end);
 
-local v56 = v16.Hunt:AddSection("Setting Player");
+local v56 = v16.Player:AddSection("Setting Player");
 
-local v115 = v16.Hunt:AddToggle("ToggleNoClip", {
+local v115 = v16.Player:AddToggle("ToggleNoClip", {
 
 Title = "Enable NoClip",
 
@@ -13171,7 +13157,7 @@ end);
 
 end);
 
-local v116 = v16.Hunt:AddToggle("ToggleWalkonWater", {
+local v116 = v16.Player:AddToggle("ToggleWalkonWater", {
 
 Title = "Enable Walk on Water",
 
@@ -15162,98 +15148,6 @@ end
 end
 
 end);
-
-end
-
-end);
-
-local RaidToggle = v16.Raid:AddToggle("ToggleMobAura", {
-
-Title = "Auto Raid Mobs",
-
-Description = "Kill Aura A Little Lol",
-
-Default = false
-
-});
-
-v50:OnChanged(function(v238)
-
-_G.AutoNear = v238;
-
-if (v238 == false) then
-
-wait();
-
-Tween(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame);
-
-wait();
-
-end
-
-end);
-
-v17.ToggleMobAura:SetValue(false);
-
-spawn(function()
-
-while wait() do
-
-if _G.AutoNear then
-
-pcall(function()
-
-for v838, v839 in pairs(game.Workspace.Enemies:GetChildren()) do
-
-if (v839:FindFirstChild("Humanoid") and v839:FindFirstChild("HumanoidRootPart") and (v839.Humanoid.Health > 0)) then
-
-if v839.Name then
-
-if ((game.Players.LocalPlayer.Character.HumanoidRootPart.Position - v839:FindFirstChild("HumanoidRootPart").Position).Magnitude <= 5000) then
-
-repeat
-
-wait(_G.Fast_Delay);
-
-AttackNoCoolDown();
-
-bringmob = true;
-
-AutoHaki();
-
-EquipTool(SelectWeapon);
-
-Tween(v839.HumanoidRootPart.CFrame * Pos);
-
-v839.HumanoidRootPart.Size = Vector3.new(60, 60, 60);
-
-v839.HumanoidRootPart.Transparency = 1;
-
-v839.Humanoid.JumpPower = 0;
-
-v839.Humanoid.WalkSpeed = 0;
-
-v839.HumanoidRootPart.CanCollide = false;
-
-FarmPos = v839.HumanoidRootPart.CFrame;
-
-MonFarm = v839.Name;
-
-until not _G.AutoNear or not v839.Parent or (v839.Humanoid.Health <= 0) or not game.Workspace.Enemies:FindFirstChild(v839.Name)
-
-bringmob = false;
-
-end
-
-end
-
-end
-
-end
-
-end);
-
-end
 
 end
 
@@ -18358,7 +18252,7 @@ end
 
 end);
 
-local v178 = v16.Hunt:AddToggle("SuperDashToggle", {
+local v178 = v16.Player:AddToggle("SuperDashToggle", {
     Title = "Super Dash", 
     Description = "Make Your Dash Longer Lol",
     Default = false
@@ -18379,7 +18273,7 @@ v178:OnChanged(function(state)
 end)
 
 -- Inf Stamina
-local InfiniteStaminaToggle = v16.Hunt:AddToggle("InfiniteStaminaToggle", {
+local InfiniteStaminaToggle = v16.Player:AddToggle("InfiniteStaminaToggle", {
     Title = "Infinite Stamina",
     Default = false
 })
@@ -18413,7 +18307,7 @@ spawn(function()
 end)
 
 -- Dash No CD
-local DashNoCooldownToggle = v16.Hunt:AddToggle("DashNoCooldownToggle", {
+local DashNoCooldownToggle = v16.Misc:AddToggle("DashNoCooldownToggle", {
     Title = "Dash No Cooldown",
     Description = "Unlimted Dash"
 })
@@ -18457,69 +18351,11 @@ game.Players.LocalPlayer.CharacterAdded:Connect(function()
     end
 end)
 
--- Spectate Player
-_G.Spectating = false
-_G.SelectPly = nil -- No default player
-
-
-
--- Spectate Function
-function SpectatePlayer()
-    local localPlayer = game:GetService("Players").LocalPlayer
-    local camera = game:GetService("Workspace").Camera
-
-    -- Ensure a valid target player is selected
-    if not _G.SelectPly or _G.SelectPly == "" then
-        warn("No player selected!")
-        StopSpectating()
-        return
-    end
-
-    local targetPlayer = game:GetService("Players"):FindFirstChild(_G.SelectPly)
-    if not targetPlayer or not targetPlayer.Character then 
-        warn("Invalid player selected or player not in-game!")
-        StopSpectating()
-        return
-    end
-
-    -- Set camera to target player
-    camera.CameraSubject = targetPlayer.Character:FindFirstChildOfClass("Humanoid")
-    _G.Spectating = true
-
-    -- Stop spectating if the target dies or leaves
-    local connection
-    connection = targetPlayer.CharacterRemoving:Connect(function()
-        if _G.Spectating then
-            StopSpectating()
-            connection:Disconnect()
-        end
-    end)
-
-    print("Now spectating:", _G.SelectPly)
-end
-
--- Stop Spectating Function
-function StopSpectating()
-    local localPlayer = game:GetService("Players").LocalPlayer
-    local camera = game:GetService("Workspace").Camera
-    camera.CameraSubject = localPlayer.Character:FindFirstChildOfClass("Humanoid")
-    _G.Spectating = false
-    print("Stopped spectating.")
-end
-
--- Toggle Spectate
-ToggleSpectate:OnChanged(function(state)
-    if state then
-        SpectatePlayer()
-    else
-        StopSpectating()
-    end
-end)
 
 
 v14:Notify({
 
-Title = "Viper Hub Deluxe",
+Title = "Viper Hub Premium",
 
 Content = "Viper Hub Loaded",
 
