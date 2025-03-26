@@ -6,13 +6,13 @@ Title = "Viper Hub-BloxFruit [BETA]",
 
 SubTitle = "by Viper_",
 
-Width = 160,
+TabWidth = 160,
 
 Theme = "Dark",
 
 Acrylic = false,
 
-Size = UDim2.fromOffset(500, 365),
+Size = UDim2.fromOffset(500, 370),
 
 MinimizeKey = Enum.KeyCode.End
 
@@ -18415,7 +18415,7 @@ end)
 -- Dash No CD
 local DashNoCooldownToggle = v16.Hunt:AddToggle("DashNoCooldownToggle", {
     Title = "Dash No Cooldown",
-    Description = "Fixing Because Crashed"
+    Description = "Unlimted Dash"
 })
 
 _G.DashNoCd = false -- Set to false to disable
