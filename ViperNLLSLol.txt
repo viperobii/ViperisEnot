@@ -1,6 +1,6 @@
 -- This checks if the key is already set in getgenv().Key
 local correctKey = "ILOVEVIPER766541"
-if not getgenv().Key or getgenv().Key ~= correctKey then
+if getgenv().Key ~= correctKey then
     game.Players.LocalPlayer:Kick("Wrong Key! Access Denied.")
     return
 end
